@@ -18,6 +18,37 @@
   </body>
   <script>
     const images = document.querySelector('#images');
-    const imageURLs = [];
+    const baseURL = 'https://tobar-portfolio.s3-us-west-1.amazonaws.com/';
+    const imageURLs = [
+      'sandm.jpg',
+      'educatedboys.jpg',
+      'vanillasky.jpg',
+      'antonforegg.jpg',
+      'britforegg.jpg',
+      'seanforegg.jpg',
+      'hoho3.jpg',
+      'hoho1.jpg',
+      'hoho2.jpg',
+      'tonpromo.jpg',
+      'sean1.jpg',
+      'rcpromo.jpg',
+      'mark.jpg',
+      'mario.jpg',
+      'dorthy.jpg',
+      'cow.jpg',
+      'sauciego.jpg',
+      'hightide.jpg',
+      'ohoh1.jpg',
+      'ohoh2.jpg',
+      'ohoh3.jpg',
+      'jer1.jpg',
+      'jarr2.jpg',
+      'jerr3.jpg',
+    ];
+    images.innerHTML = imageURLs
+      .map(url => {
+        return `<img src='${baseURL + url}'>`;
+      })
+      .join('');
   </script>
 </html>
