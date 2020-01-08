@@ -1,0 +1,71 @@
+/* STYLES */
+
+* {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  margin: 0;
+}
+
+a:visited,
+a:link {
+  color: #000;
+}
+
+/*  INDEX */
+
+/* SUB-PAGES */
+
+.header {
+  display: flex;
+  align-items: center;
+  background-color: #000;
+  color: #fff;
+
+  top: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.header a {
+  margin-left: 20px;
+  color: #fff;
+}
+
+.header a i {
+  transition: transform 0.3s ease-out;
+}
+
+.header a:hover i {
+  transform: translate(-10px, 0);
+}
+
+.header .title {
+  flex: auto;
+  text-align: center;
+}
+
+#links {
+  display: flex;
+  flex-direction: column;
+}
+
+#links a {
+  font-family: 'Impact';
+  text-decoration: none;
+  transition: transform 0.3s ease-out;
+  font-size: 70pt;
+}
+
+#links a:hover {
+  transform: translate(10px, 0);
+}
+
+/* Type */
+h1,
+h2,
+h3 {
+  font-family: Impact;
+}
