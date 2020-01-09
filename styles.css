@@ -134,19 +134,29 @@ h3 {
   color: #fff;
   background-color: #000;
   padding: 15px;
+  padding-left: 50px;
 
-  display: grid;
-  grid-template-columns: 30px auto;
+  display: flex;
+  flex-direction: column;
 }
 
 .footer i {
   margin: auto;
 }
 
-.grid-header {
-  grid-column: 1 / span 2;
+.footer i:hover {
+  cursor: pointer;
+}
+
+.footer p.grid-header {
+  font-weight: bold;
   font-variant: small-caps;
-  padding: 0 -10px;
+  margin: 10px -10px;
+}
+
+.footer a {
+  display: flex;
+  width: fit-content;
 }
 
 .footer a:link,
@@ -154,7 +164,11 @@ h3 {
   color: #fff;
 }
 
+.footer a {
+  text-decoration: none;
+}
+
 .footer p {
   margin: 10px 0px;
-  padding: 0 10px;
+  padding: 0 15px;
 }
