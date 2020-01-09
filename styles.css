@@ -55,7 +55,7 @@ a:link {
 #links {
   display: flex;
   flex-direction: column;
-  height: fit-content;
+  height: min-content;
   background: #000;
 }
 
@@ -77,7 +77,7 @@ a:link {
   display: grid;
   margin: 30px auto;
   grid-template-columns: 1fr 1fr 1fr;
-  width: fit-content;
+  width: min-content;
 }
 
 #images img {
@@ -156,7 +156,7 @@ h3 {
 
 .footer a {
   display: flex;
-  width: fit-content;
+  width: min-content;
 }
 
 .footer a:link,
