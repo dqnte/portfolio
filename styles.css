@@ -157,6 +157,7 @@ h3 {
 .footer a {
   display: flex;
   width: min-content;
+  white-space: nowrap;
 }
 
 .footer a:link,
