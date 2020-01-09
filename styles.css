@@ -55,13 +55,16 @@ a:link {
 #links {
   display: flex;
   flex-direction: column;
+  height: fit-content;
+  background: #000;
 }
 
 #links a {
-  font-family: 'Impact';
+  font-family: 'Cunia';
   text-decoration: none;
   transition: transform 0.3s ease-out;
   font-size: 70pt;
+  color: #fff;
 }
 
 #links a:hover {
@@ -72,7 +75,7 @@ a:link {
 
 #images {
   display: grid;
-  margin: 0 auto;
+  margin: 30px auto;
   grid-template-columns: 1fr 1fr 1fr;
   width: fit-content;
 }
@@ -96,6 +99,7 @@ a:link {
   display: flex;
   width: 80%;
   box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.16);
+  height: 40vh;
 }
 
 .project .info {
@@ -103,12 +107,54 @@ a:link {
 }
 
 .logo {
-  width: 25%;
+  height: 100%;
 }
 
 /* Type */
 h1,
 h2,
 h3 {
-  font-family: Impact;
+  font-family: 'Cunia';
+}
+
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@font-face {
+  font-family: 'Cunia';
+
+  src: url('https: ; //tobar-portfolio.s3-us-west-1.amazonaws.com/Cunia.ttf')
+    format('ttf');
+}
+
+/* FOOTER */
+
+.footer {
+  color: #fff;
+  background-color: #000;
+  padding: 15px;
+
+  display: grid;
+  grid-template-columns: 30px auto;
+}
+
+.footer i {
+  margin: auto;
+}
+
+.grid-header {
+  grid-column: 1 / span 2;
+  font-variant: small-caps;
+  padding: 0 -10px;
+}
+
+.footer a:link,
+.footer a:visited {
+  color: #fff;
+}
+
+.footer p {
+  margin: 10px 0px;
+  padding: 0 10px;
 }
