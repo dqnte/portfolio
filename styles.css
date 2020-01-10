@@ -110,6 +110,18 @@ a:link {
   height: 100%;
 }
 
+/* EXPERIENCE */
+
+ul {
+  list-style-type: none;
+}
+
+.type {
+  font-variant: small-caps;
+  font-size: 0.8em;
+  color: rgba(0, 0, 0, 0.584);
+}
+
 /* Type */
 h1,
 h2,
