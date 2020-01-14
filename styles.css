@@ -90,9 +90,9 @@ a:link {
   opacity: 0;
 }
 
-#images img.loaded {
-  opacity: 1;
-  animation-name: fadeIn;
+.loaded {
+  opacity: 1 !important;
+  animation: fadeIn;
   animation-timing-function: linear;
   animation-duration: 0.25s;
 }
