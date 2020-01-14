@@ -21,29 +21,51 @@
       </a>
       <h2 class="title">CONTACT</h2>
     </div>
-    <div class="footer">
-      <p class="grid-header">CONTACT</p>
+    <div id="contact" class="unloaded">
+      <img src="https://tobar-portfolio.s3-us-west-1.amazonaws.com/guber.jpg" />
+      <div class="footer">
+        <a href="http://linkedin.com/in/dante-m-tobar">
+          <i style="font-size:2em" class="fa">&#xf0e1;</i>
+          <h4>linkedin.com/in/dante-m-tobar</h4>
+        </a>
+        <a>
+          <i class="material-icons">
+            email
+          </i>
+          <h4>dante.m.tobar@gmail.com</h4>
+        </a>
+        <a href="http://github.com/tuna-melt">
+          <i style="font-size:2em" class="fa">&#xf09b;</i>
+          <h4>github.com/tuna-melt</h4>
+        </a>
+        <a href="https://www.instagram.com/eggward_norton/">
+          <i style="font-size:2em" class="fa">&#xf16d;</i>
+          <h4>@eggward.norton</h4>
+        </a>
 
-      <a href="http://linkedin.com/in/dante-m-tobar">
-        <i style="font-size:24px" class="fa">&#xf0e1;</i>
-        <p>linkedin.com/in/dante-m-tobar</p>
-      </a>
-      <a href="http://github.com/tuna-melt">
-        <i style="font-size:24px" class="fa">&#xf09b;</i>
-        <p>github.com/tuna-melt</p>
-      </a>
-      <a>
-        <i class="material-icons">
-          email
-        </i>
-        <p>dante.m.tobar@gmail.com</p>
-      </a>
-      <a>
-        <i class="material-icons">
-          smartphone
-        </i>
-        <p>(213) 448 - 2881</p>
-      </a>
+        <a>
+          <i class="material-icons">
+            smartphone
+          </i>
+          <h4>(213) 448 - 2881</h4>
+        </a>
+      </div>
     </div>
   </body>
+  <script>
+    const bufferSetUp = async () => {
+      const face = await document.querySelector('img');
+      const contact = await document.querySelector('#contact');
+
+      if (!face.complete) {
+        face.addEventListener('load', () => {
+          contact.classList = 'loaded';
+        });
+      } else {
+        contact.classList = 'loaded';
+      }
+    };
+
+    bufferSetUp();
+  </script>
 </html>
