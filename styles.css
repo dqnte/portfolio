@@ -9,8 +9,8 @@ html {
   margin: 0;
 }
 
-a:visited,
-a:link {
+a:link,
+a:visited {
   color: #000;
 }
 
@@ -72,6 +72,10 @@ a:link {
   transform: translate(10px, 0);
 }
 
+.link-container {
+  width: 40vh;
+}
+
 /* IMAGES */
 
 #images {
@@ -115,6 +119,7 @@ a:link {
   display: flex;
   flex-direction: column;
   align-items: center;
+  opacity: 0;
 }
 .project {
   margin: 20px;

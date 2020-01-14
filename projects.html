@@ -21,27 +21,30 @@
       </a>
       <h2 class="title">PROJECTS</h2>
     </div>
-    <div id="projects" class="loaded">
+    <div id="projects">
       <div class="project">
-        <a href="https://coreo-ai.herokuapp.com" target="_blank">
-          <img
-            class="logo"
-            src="https://tobar-portfolio.s3-us-west-1.amazonaws.com/coreo-tab.jpg"
-          />
-        </a>
-
+        <div class="link-container">
+          <a href="https://coreo-ai.herokuapp.com" target="_blank">
+            <img
+              class="logo"
+              src="https://tobar-portfolio.s3-us-west-1.amazonaws.com/coreo-tab.jpg"
+            />
+          </a>
+        </div>
         <div class="info">
           <h2>COREO</h2>
           <p>This is for coreo</p>
         </div>
       </div>
       <div class="project">
-        <a href="http://nanas-boutique.herokuapp.com/" target="_blank">
-          <img
-            class="logo"
-            src="https://tobar-portfolio.s3-us-west-1.amazonaws.com/nanas-tab.jpg"
-          />
-        </a>
+        <div class="link-container">
+          <a href="http://nanas-boutique.herokuapp.com/" target="_blank">
+            <img
+              class="logo"
+              src="https://tobar-portfolio.s3-us-west-1.amazonaws.com/nanas-tab.jpg"
+            />
+          </a>
+        </div>
         <div class="info">
           <h2>Nanas</h2>
           <p>This is for nanas</p>
@@ -93,4 +96,9 @@
       </a>
     </div>
   </body>
+  <script>
+    const projects = document.querySelector('#projects');
+
+    window.addEventListener('load', () => projects.classList.add('loaded'));
+  </script>
 </html>
