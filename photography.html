@@ -79,5 +79,26 @@
         return `<img src='${baseURL + url}'>`;
       })
       .join('');
+
+    const bufferSetUp = async () => {
+      const imageTags = await document.querySelectorAll('img');
+
+      let loadedCount = 0;
+      const loaded = () => {
+        loadedCount += 1;
+
+        if (loadedCount === imageURLs.length) {
+          imageTags.forEach(tag => {
+            tag.classList.add('loaded');
+          });
+        }
+      };
+
+      imageTags.forEach(tag => {
+        tag.addEventListener('load', loaded);
+      });
+    };
+
+    bufferSetUp();
   </script>
 </html>
