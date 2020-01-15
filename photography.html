@@ -20,7 +20,7 @@
       <h2 class="title">PHOTOGRAPHY</h2>
     </div>
     <div id="images"></div>
-    <div class="footer">
+    <div class="footer unloaded">
       <p class="grid-header">CONTACT</p>
 
       <a href="http://linkedin.com/in/dante-m-tobar">
@@ -47,6 +47,7 @@
   </body>
   <script>
     const images = document.querySelector('#images');
+    const footer = document.querySelector('.footer');
     const baseURL = 'https://tobar-portfolio.s3-us-west-1.amazonaws.com/';
     const imageURLs = [
       'sandm.jpg',
@@ -91,6 +92,7 @@
           imageTags.forEach(tag => {
             tag.classList.add('loaded');
           });
+          footer.classList = 'footer loaded';
         }
       };
 
