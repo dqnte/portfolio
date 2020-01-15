@@ -52,20 +52,37 @@ a:visited {
   z-index: 1;
 }
 
+#index-container {
+  background: #000;
+  z-index: -2;
+}
+
 #links {
   display: flex;
   flex-direction: column;
   height: min-content;
-  background: #000;
+  background: transparent;
+
+  padding: 4em;
+}
+
+.background {
+  position: absolute;
+  margin-top: -4em;
+  height: 100vh;
+  right: 0;
+  z-index: -1;
 }
 
 #links a {
   font-family: poppins;
   text-decoration: none;
+  margin: 20px;
   font-weight: 900;
   transition: transform 0.3s ease-out;
-  font-size: 70pt;
+  font-size: 40pt;
   color: #fff;
+  width: min-content;
 }
 
 #links a:hover {
@@ -283,6 +300,13 @@ h4 {
 
 .unloaded {
   opacity: 0;
+}
+
+.load-fade {
+  opacity: 1 !important;
+  animation: fadeIn;
+  animation-timing-function: ease-in-out;
+  animation-duration: 1s;
 }
 
 .loaded {
