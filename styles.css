@@ -266,10 +266,6 @@ h4 {
   margin: auto;
 }
 
-.footer i:hover {
-  cursor: pointer;
-}
-
 .footer p.grid-header {
   font-weight: bold;
   font-variant: small-caps;
