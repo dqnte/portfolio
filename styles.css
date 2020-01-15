@@ -303,7 +303,7 @@ h4 {
   opacity: 1 !important;
   animation: fadeIn;
   animation-timing-function: ease-in-out;
-  animation-duration: 1s;
+  animation-duration: 0.75s;
 }
 
 .loaded {
