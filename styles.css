@@ -90,7 +90,7 @@ a:visited {
 }
 
 .link-container {
-  width: 40vh;
+  width: 100%;
 }
 
 /* IMAGES */
@@ -115,18 +115,50 @@ a:visited {
 
 #projects {
   width: 100%;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  padding: 50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 3rem;
   opacity: 0;
 }
+
+@media (min-width: 1000px) {
+  #projects {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0;
+  }
+  .project {
+    margin-bottom: 30px !important;
+    display: flex;
+    flex-direction: row !important;
+    width: 100%;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.16);
+    height: 40vh;
+  }
+
+  .project .info {
+    padding: 10px 30px;
+  }
+
+  .logo {
+    height: 100% !important;
+    width: unset !important;
+  }
+
+  .link-container {
+    width: min-content;
+  }
+}
+
 .project {
-  margin: 20px;
+  margin: 0 auto;
   display: flex;
-  width: 80%;
+  flex-direction: column;
   box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.16);
-  height: 40vh;
 }
 
 .project .info {
@@ -134,7 +166,7 @@ a:visited {
 }
 
 .logo {
-  height: 100%;
+  width: 100%;
 }
 
 /* EXPERIENCE */
