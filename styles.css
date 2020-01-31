@@ -278,6 +278,37 @@ ul {
   margin-bottom: 2em;
 }
 
+@media (max-width: 900px) {
+  .employment {
+    width: 100% !important;
+  }
+
+  #experience > ul {
+    padding: 0px;
+  }
+
+  .employment {
+    padding: 0px !important;
+  }
+
+  .employment .item {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .employment .info {
+    text-align: center !important;
+  }
+  .employment .summary {
+    justify-self: flex-end;
+    order: 3;
+    padding-left: 0px;
+    border-left: unset !important;
+    xborder-top: 1pt solid rgba(128, 128, 128, 0.502);
+  }
+}
+
 .employment .item .item-header {
   text-align: right;
   font-size: 1.5em;
@@ -460,11 +491,11 @@ h4 {
 
 @keyframes fadeIn {
   from {
-    opacity: 0;
+    filter: opacity(0);
   }
 
   to {
-    opacity: 1;
+    filter: opacity(1);
   }
 }
 
