@@ -154,6 +154,11 @@ a:visited {
   padding: 10px 30px;
 }
 
+.project .info .info-header {
+  display: flex;
+  justify-content: space-between;
+}
+
 .project p {
   font-size: 1rem;
 }
@@ -161,7 +166,6 @@ a:visited {
 .project-links {
   display: flex;
   justify-content: center;
-  margin-top: 3rem;
 }
 
 .project-links a {
@@ -171,11 +175,9 @@ a:visited {
 
 .project-links .button-link {
   position: relative;
-  padding-left: 4.07142857em !important;
+  padding-left: 2em !important;
   padding-right: 1.5em !important;
 
-  background-color: #1b1c1d;
-  color: #fff;
   font-size: 1rem;
 
   cursor: pointer;
@@ -185,7 +187,6 @@ a:visited {
   outline: 0;
   border: none;
   vertical-align: baseline;
-  margin: 0 0.25em 0 0;
   font-weight: 700;
   line-height: 1em;
   font-style: normal;
@@ -205,12 +206,11 @@ a:visited {
 
 .project-links .button-link i {
   left: 0;
-  top: 20%;
+  top: 25%;
   position: absolute;
   height: 100%;
   text-align: center;
-  width: 2.57142857em;
-  font-size: 1.75rem !important;
+  font-size: 1.5rem !important;
 }
 
 .logo {
