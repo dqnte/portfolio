@@ -16,6 +16,71 @@ a:visited {
 
 /*  INDEX */
 
+#contact p {
+  color: #fff;
+  width: 600px;
+  padding: 30px;
+  font-size: 2rem;
+  overflow-wrap: break-word;
+}
+
+#index-container {
+  background: #000;
+  z-index: -2;
+}
+
+#links {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: transparent;
+  padding: 4em;
+  height: 90vh;
+}
+
+@media (max-width: 900px) {
+  #links {
+    align-items: center;
+  }
+
+  #contact p {
+    width: 80%;
+    order: -1;
+  }
+}
+
+.background {
+  position: absolute;
+  margin-top: -4em;
+  height: 90vh;
+  right: 0;
+  z-index: -1;
+}
+
+#links,
+.background {
+  min-height: 500px;
+}
+
+#links a {
+  font-family: poppins;
+  text-decoration: none;
+  margin: 20px;
+  font-weight: 900;
+  transition: transform 0.3s ease-out;
+  font-size: 40pt;
+  color: #fff;
+  width: min-content;
+}
+
+#links a:hover {
+  transform: translate(10px, 0);
+}
+
+.link-container {
+  width: min-content;
+}
+
 /* SUB-PAGES */
 
 .header {
@@ -52,47 +117,6 @@ a:visited {
   margin: 0 auto;
   text-align: center;
   z-index: 1;
-}
-
-#index-container {
-  background: #000;
-  z-index: -2;
-}
-
-#links {
-  display: flex;
-  flex-direction: column;
-  height: min-content;
-  background: transparent;
-
-  padding: 4em;
-}
-
-.background {
-  position: absolute;
-  margin-top: -4em;
-  height: 100vh;
-  right: 0;
-  z-index: -1;
-}
-
-#links a {
-  font-family: poppins;
-  text-decoration: none;
-  margin: 20px;
-  font-weight: 900;
-  transition: transform 0.3s ease-out;
-  font-size: 40pt;
-  color: #fff;
-  width: min-content;
-}
-
-#links a:hover {
-  transform: translate(10px, 0);
-}
-
-.link-container {
-  width: min-content;
 }
 
 /* IMAGES */
@@ -368,11 +392,26 @@ ul {
 #contact {
   display: flex;
   justify-content: center;
-  margin: 30px auto;
+  margin: 0 auto;
+}
+
+@media (max-width: 900px) {
+  #contact {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  #contact img {
+    max-height: 900px;
+    width: 80% !important;
+    height: 80vw !important;
+  }
 }
 
 #contact img {
-  height: 60vh;
+  padding: 40px;
+  height: 640px;
+  width: 640px;
 }
 
 #contact .footer,
