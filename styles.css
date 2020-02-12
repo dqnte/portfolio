@@ -20,7 +20,7 @@ a:visited {
   color: #fff;
   width: 600px;
   padding: 30px;
-  font-size: 2rem;
+  font-size: 1.5rem;
   overflow-wrap: break-word;
 }
 
@@ -436,6 +436,29 @@ ul {
 .education p {
   color: grey;
   font-weight: 200;
+}
+
+.skills h5 {
+  font-family: poppins;
+}
+
+.skills {
+  color: #808080;
+  letter-spacing: 0.2rem;
+  text-align: center;
+  margin: 3rem 0 4rem -40px;
+}
+
+@media (max-width: 900px) {
+  .skills {
+    margin-left: unset !important;
+  }
+}
+
+@media (max-device-width: 900px) {
+  .skills {
+    margin-left: unset !important;
+  }
 }
 
 /* Contact */
