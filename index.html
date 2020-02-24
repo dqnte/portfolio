@@ -135,7 +135,8 @@
 
     const name = document.querySelector('#name');
 
-    sky.addEventListener('load', () => {
+    // wrap up
+    setTimeout(() => {
       sky.classList = 'load-fade';
       if (isMobile) {
         sky.classList.add('mobile');
@@ -146,8 +147,7 @@
           name.classList.add('mobile');
         }
       }, 1000);
-    });
-
-    setTimeout(() => (firstImg.classList = 'background loaded'), 2000);
+      firstImg.classList = 'background loaded';
+    }, 200);
   </script>
 </html>
