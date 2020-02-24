@@ -13,28 +13,38 @@
   <link rel="icon" type="image/png" href="/favicon.ico" />
   <link href="styles.css" rel="stylesheet" />
   <body style="background-color:#000">
+    <div id="landing">
+      <div class="reveal-container">
+        <h1 id="name" class="unloaded">Dante Tobar</h1>
+      </div>
+      <img
+        src="https://tobar-portfolio.s3-us-west-1.amazonaws.com/sky-comp.jpg"
+        class="unloaded"
+        id="sky"
+      />
+    </div>
     <div id="links">
       <a href="projects.html" id="proj-link" class="loaded">PROJECTS</a>
       <a href="photography.html" id="photo-link" class="loaded">PHOTOGRAPHY</a>
       <a href="experience.html" id="exp-link" class="loaded">EXPERIENCE</a>
       <a href="contact.html" id="contact-link" class="loaded">CONTACT</a>
       <img
-        src="https://tobar-portfolio.s3-us-west-1.amazonaws.com/bike-crop.jpg"
+        src="https://tobar-portfolio.s3-us-west-1.amazonaws.com/bike-comp.jpg"
         id="bike-img"
-        class="background loaded"
+        class="background unloaded"
       />
       <img
-        src="https://tobar-portfolio.s3-us-west-1.amazonaws.com/computer-final.jpg"
+        src="https://tobar-portfolio.s3-us-west-1.amazonaws.com/computer-comp.jpg"
         id="computer-img"
         class="background unloaded"
       />
       <img
-        src="https://tobar-portfolio.s3-us-west-1.amazonaws.com/project-final.jpg"
+        src="https://tobar-portfolio.s3-us-west-1.amazonaws.com/project-comp.jpg"
         id="project-img"
         class="background unloaded"
       />
       <img
-        src="https://tobar-portfolio.s3-us-west-1.amazonaws.com/camera-final.jpg"
+        src="https://tobar-portfolio.s3-us-west-1.amazonaws.com/camera-comp.jpg"
         id="camera-img"
         class="background unloaded"
       />
@@ -74,6 +84,18 @@
     </div>
   </body>
   <script>
+    const sky = document.querySelector('#sky');
+    let isMobile = false;
+    if (
+      /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+        navigator.userAgent
+      )
+    ) {
+      isMobile = true;
+      sky.src =
+        'https://tobar-portfolio.s3-us-west-1.amazonaws.com/sky-mobile.jpg';
+    }
+
     const backgrounds = document.querySelectorAll('.background');
 
     const proj = document.querySelector('#proj-link');
@@ -110,5 +132,22 @@
       contact.classList = 'loaded';
       firstImg.classList = 'background loaded';
     });
+
+    const name = document.querySelector('#name');
+
+    sky.addEventListener('load', () => {
+      sky.classList = 'load-fade';
+      if (isMobile) {
+        sky.classList.add('mobile');
+      }
+      setTimeout(() => {
+        name.classList = 'load-reveal';
+        if (isMobile) {
+          name.classList.add('mobile');
+        }
+      }, 1000);
+    });
+
+    setTimeout(() => (firstImg.classList = 'background loaded'), 2000);
   </script>
 </html>
