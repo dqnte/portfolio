@@ -16,6 +16,59 @@ a:visited {
 
 /*  INDEX */
 
+#landing {
+  height: 100vh;
+  color: #464646;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+.reveal-container {
+  overflow: hidden;
+  margin: 0;
+}
+
+#landing .reveal-container {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  z-index: 2;
+  font-size: 2rem;
+  top: calc(40% - 1rem);
+}
+
+#name {
+  margin: 0;
+  position: relative;
+  bottom: -1rem;
+}
+
+#name.mobile {
+  font-size: 3em;
+}
+
+#landing img {
+  width: 1300px;
+  margin: 0 auto;
+  position: absolute;
+  top: -9999px;
+  bottom: -9999px;
+  left: -9999px;
+  right: -9999px;
+  margin: auto;
+}
+
+#landing img.mobile {
+  top: unset;
+  bottom: 0;
+  left: unset;
+  right: unset;
+  width: 100vw;
+}
+
 #contact p {
   color: #fff;
   width: 600px;
@@ -633,6 +686,13 @@ h4 {
   animation-duration: 0.5s;
 }
 
+.load-reveal {
+  animation: reveal;
+  animation-timing-function: ease-in-out;
+  animation-duration: 0.8s;
+  animation-delay: 0s;
+}
+
 @keyframes fadeIn {
   from {
     filter: opacity(0);
@@ -649,5 +709,15 @@ h4 {
   }
   to {
     transform: translateY(0px);
+  }
+}
+
+@keyframes reveal {
+  from {
+    transform: translateY(1.5em);
+  }
+
+  to {
+    transform: translateY(0);
   }
 }
