@@ -1,16 +1,81 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://use.typekit.net/hay4ffs.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link href="styles.css" rel="stylesheet" />
+  </head>
   <body>
-    <div class="project-links">
-      <a
-        href="https://github.com/tuna-melt/create-react-express"
-        target="_blank"
-      >
-        <div class="button-link">
-          <i class="fab fa-github"></i>
-          <p>Github</p>
-        </div>
+    <div class="header">
+      <a href="projects.html" class="back">
+        <i class="material-icons">
+          arrow_back
+        </i>
+      </a>
+      <h2 class="title">REACT APP ++</h2>
+    </div>
+    <div id="reactapp" class="project-summary">
+      <p>
+        This project was pretty simple. I was getting tired of setting up React
+        and Webpack and Bable and Node and Express, so I wrote a script to fix
+        that.
+      </p>
+      <p>
+        Now I have a script that starts everything right for me every time. It's
+        super useful if you want to just get started on a project. This was more
+        for me, but if you're familiar with bash you should be able to get it to
+        work on yours. The script is in the github.
+      </p>
+      <div class="project-links">
+        <a
+          href="https://github.com/tuna-melt/create-react-express"
+          target="_blank"
+        >
+          <div class="button-link">
+            <i class="fab fa-github"></i>
+            <p>Github</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="footer">
+      <p class="grid-header">CONTACT</p>
+
+      <a href="http://linkedin.com/in/dante-m-tobar">
+        <i style="font-size:24px" class="fab fa-linkedin"></i>
+        <p>linkedin.com/in/dante-m-tobar</p>
+      </a>
+      <a href="http://github.com/tuna-melt">
+        <i style="font-size:24px" class="fab fa-github"></i>
+        <p>github.com/tuna-melt</p>
+      </a>
+      <a>
+        <i class="material-icons">
+          email
+        </i>
+        <p>dante.m.tobar@gmail.com</p>
+      </a>
+      <a>
+        <i class="material-icons">
+          smartphone
+        </i>
+        <p>(213) 448 - 2881</p>
       </a>
     </div>
   </body>
+  <script>
+    const nanas = document.querySelector('#reactapp');
+
+    window.addEventListener('load', () => {
+      reactapp.classList.add('loaded');
+    });
+  </script>
 </html>

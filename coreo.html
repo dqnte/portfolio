@@ -31,6 +31,7 @@
         they can then record their own dance, which is then compared to the
         original video using computer vision.
       </p>
+
       <h2>
         Coreo is a single page web application with built with React on the
         front-end and Node on the back-end
@@ -40,6 +41,9 @@
         grade one dancer's based on another dancer's performace. We achieved
         this doing a combination of Tensorflow and web workers.
       </p>
+      <img
+        src="https://raw.githubusercontent.com/brain-dance/brain-dancer/master/coreo-example.png"
+      />
       <p>
         While a dancer is recording their video, frames are sent one at a time
         to a web worker. The web worker runs the frame through Posenet, which
@@ -53,6 +57,9 @@
         The back-end uses a Node server, a PostGreSQL DB for user information
         and a Cloudinary DB for video storage.
       </h2>
+      <img
+        src="https://tobar-portfolio.s3-us-west-1.amazonaws.com/coreo-ui.png"
+      />
       <p>
         When a choreographer uploads a video, Node uses FFMPEG (a command line
         library for image and video processing) to split the new video into
