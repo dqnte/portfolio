@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://use.typekit.net/hay4ffs.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link href="styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="header">
+      <a href="projects.html" class="back">
+        <i class="material-icons">
+          arrow_back
+        </i>
+      </a>
+      <h2 class="title">COREO</h2>
+    </div>
+    <div id="coreo">
+      <p>
+        Coreo is a tool for choreographers to share videos with their dances and
+        vise-versa. Choreographers record videos with their webcam that they can
+        then share with their dance team. The dancers in the dance team can then
+        watch and practice the routine. When a dancer has got the routine down
+        they can then record their own dance, which is then compared to the
+        original video using computer vision.
+      </p>
+      <p>
+        Coreo is a single page web application with built with React on the
+        front-end and Node on the back-end.
+      </p>
+      <p>
+        The intial idea behind Coreo was building an application that could
+        grade one dancer's based on another dancer's performace. We achieved
+        this doing a combination of Tensorflow and web workers.
+      </p>
+      <p>
+        While a dancer is recording their video, frames are sent one at a time
+        to a web worker. The web worker runs the frame through Posenet, which
+        returns the body positions of the dancer. When the video is done
+        recording, we have a list of frames with individual poses. The web
+        worker then sends these frames back to the main thread, which compares
+        the frames to the choreographers video. The scores of each frame are
+        then aggregated to one score which is the dancer's score for the video.
+      </p>
+      <p>
+        The back-end uses a Node server, PostGreSQL as a DB for user information
+        and Cloudinary for video storage.
+      </p>
+      <p>
+        When a choreographer uploads a video, Node uses FFMPEG (a command line
+        library for image and video processing) to split the new video into
+        individual frames. Each frame is then passed to Posenet which detects
+        the poses of the dancer. The poses are then converted to strings and
+        saved in an PostGreSQL along with other video information. The video is
+        saved to Cloudinary.
+      </p>
+    </div>
+  </body>
+</html>
