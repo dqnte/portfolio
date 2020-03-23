@@ -22,7 +22,7 @@
       </a>
       <h2 class="title">COREO</h2>
     </div>
-    <div id="coreo">
+    <div id="coreo" class="project-summary">
       <p>
         Coreo is a tool for choreographers to share videos with their dances and
         vise-versa. Choreographers record videos with their webcam that they can
@@ -31,10 +31,10 @@
         they can then record their own dance, which is then compared to the
         original video using computer vision.
       </p>
-      <p>
+      <h2>
         Coreo is a single page web application with built with React on the
-        front-end and Node on the back-end.
-      </p>
+        front-end and Node on the back-end
+      </h2>
       <p>
         The intial idea behind Coreo was building an application that could
         grade one dancer's based on another dancer's performace. We achieved
@@ -49,10 +49,10 @@
         the frames to the choreographers video. The scores of each frame are
         then aggregated to one score which is the dancer's score for the video.
       </p>
-      <p>
-        The back-end uses a Node server, PostGreSQL as a DB for user information
-        and Cloudinary for video storage.
-      </p>
+      <h2>
+        The back-end uses a Node server, a PostGreSQL DB for user information
+        and a Cloudinary DB for video storage.
+      </h2>
       <p>
         When a choreographer uploads a video, Node uses FFMPEG (a command line
         library for image and video processing) to split the new video into
@@ -61,20 +61,20 @@
         saved in an PostGreSQL along with other video information. The video is
         saved to Cloudinary.
       </p>
-    </div>
-    <div class="project-links">
-      <a href="https://coreo-ai.herokuapp.com" target="_blank">
-        <div class="button-link">
-          <i class="fas fa-globe-americas"></i>
-          <p>Site</p>
-        </div>
-      </a>
-      <a href="https://github.com/brain-dance/brain-dancer" target="_blank">
-        <div class="button-link">
-          <i class="fab fa-github"></i>
-          <p>Github</p>
-        </div>
-      </a>
+      <div class="project-links">
+        <a href="https://coreo-ai.herokuapp.com" target="_blank">
+          <div class="button-link">
+            <i class="fas fa-globe-americas"></i>
+            <p>Site</p>
+          </div>
+        </a>
+        <a href="https://github.com/brain-dance/brain-dancer" target="_blank">
+          <div class="button-link">
+            <i class="fab fa-github"></i>
+            <p>Github</p>
+          </div>
+        </a>
+      </div>
     </div>
     <div class="footer">
       <p class="grid-header">CONTACT</p>
@@ -101,4 +101,11 @@
       </a>
     </div>
   </body>
+  <script>
+    const coreo = document.querySelector('#coreo');
+
+    window.addEventListener('load', () => {
+      coreo.classList.add('loaded');
+    });
+  </script>
 </html>

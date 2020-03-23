@@ -7,6 +7,7 @@
 body,
 html {
   margin: 0;
+  height: 100%;
 }
 
 a:link,
@@ -51,7 +52,7 @@ a:visited {
 }
 
 #landing img {
-  width: 1300px;
+  width: 100%;
   margin: 0 auto;
   position: absolute;
   top: -9999px;
@@ -609,7 +610,6 @@ h4 {
   background-color: #000;
   padding: 15px;
   padding-left: 50px;
-
   display: flex;
   flex-direction: column;
 }
@@ -700,6 +700,27 @@ h4 {
   animation-timing-function: ease-in-out;
   animation-duration: 0.8s;
   animation-delay: 0s;
+}
+
+#coreo {
+}
+
+.project-summary {
+  min-height: 80%;
+  width: 60%;
+  margin: 20px auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.project-summary p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.project-summary h2 {
+  text-align: center;
 }
 
 @keyframes fadeIn {
