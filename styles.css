@@ -708,6 +708,7 @@ h4 {
 .project-summary {
   min-height: 80%;
   width: 60%;
+  min-width: 900px;
   margin: 20px auto;
   display: flex;
   align-items: center;
@@ -721,6 +722,11 @@ h4 {
 
 .project-summary h2 {
   text-align: center;
+}
+
+.project-summary img {
+  max-width: 80%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 @keyframes fadeIn {
