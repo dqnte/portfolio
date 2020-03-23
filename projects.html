@@ -23,49 +23,29 @@
       <h2 class="title">PROJECTS</h2>
     </div>
     <div id="projects">
-      <div class="project">
-        <div class="link-container">
-          <a href="https://coreo-ai.herokuapp.com" target="_blank">
-            <img
-              class="logo"
-              src="https://tobar-portfolio.s3-us-west-1.amazonaws.com/coreo-tab.jpg"
-            />
-          </a>
-        </div>
-        <div class="info">
-          <div class="info-header">
-            <h2>COREO</h2>
-            <div class="project-links">
-              <a href="https://coreo-ai.herokuapp.com" target="_blank">
-                <div class="button-link">
-                  <i class="fas fa-globe-americas"></i>
-                  <p>Site</p>
-                </div>
-              </a>
-              <a
-                href="https://github.com/brain-dance/brain-dancer"
-                target="_blank"
-              >
-                <div class="button-link">
-                  <i class="fab fa-github"></i>
-                  <p>Github</p>
-                </div>
-              </a>
+      <a href="coreo.html">
+        <div class="project">
+          <img
+            class="logo"
+            src="https://tobar-portfolio.s3-us-west-1.amazonaws.com/coreo-tab.jpg"
+          />
+          <div class="info unloaded">
+            <div class="info-header">
+              <h2>COREO</h2>
             </div>
+            <p>
+              Coreo (pronounced coreo) is a coreography assistance tool built
+              for dancers. Coreo allows for choreographers to upload videos of
+              10 second dance routies that their dancers can then practice.
+            </p>
+            <p>
+              Coreo is a full stack web application built using React+Redux on
+              the front end and Node+PostGreSQL on the backend. Coreo also uses
+              Tensorflow to track the body positions of each dancer's routine.
+            </p>
           </div>
-
-          <p>
-            Coreo (pronounced coreo) is a coreography assistance tool built for
-            dancers. Coreo allows for choreographers to upload videos of 10
-            second dance routies that their dancers can then practice.
-          </p>
-          <p>
-            Coreo is a full stack web application built using React+Redux on the
-            front end and Node+PostGreSQL on the backend. Coreo also uses
-            Tensorflow to track the body positions of each dancer's routine.
-          </p>
         </div>
-      </div>
+      </a>
       <div class="project">
         <div class="link-container">
           <a href="http://nanas-boutique.herokuapp.com/" target="_blank">
@@ -75,7 +55,7 @@
             />
           </a>
         </div>
-        <div class="info">
+        <div class="info unloaded">
           <div class="info-header">
             <h2>Nanas</h2>
             <div class="project-links">
@@ -117,7 +97,7 @@
             />
           </a>
         </div>
-        <div class="info">
+        <div class="info unloaded">
           <div class="info-header">
             <h2>Oscars Poll</h2>
             <div class="project-links">
@@ -178,7 +158,7 @@
               src="https://tobar-portfolio.s3-us-west-1.amazonaws.com/webpack-tab.jpg"
           /></a>
         </div>
-        <div class="info">
+        <div class="info unloaded">
           <div class="info-header">
             <h2>Create React App ++</h2>
             <div class="project-links">
@@ -234,6 +214,11 @@
   <script>
     const projects = document.querySelector('#projects');
 
-    window.addEventListener('load', () => projects.classList.add('loaded'));
+    window.addEventListener('load', () => {
+      projects.classList.add('loaded');
+
+      const infos = document.querySelectorAll('.info');
+      setInterval(() => infos.forEach(info => (info.classList = 'info')), 500);
+    });
   </script>
 </html>
