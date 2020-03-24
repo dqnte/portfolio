@@ -22,32 +22,80 @@
       </a>
       <h2 class="title">COREO</h2>
     </div>
+    <div class="project-links">
+      <a href="https://coreo-ai.herokuapp.com" target="_blank">
+        <div class="button-link">
+          <i class="fas fa-globe-americas"></i>
+          <p>Site</p>
+        </div>
+      </a>
+      <a href="https://github.com/brain-dance/brain-dancer" target="_blank">
+        <div class="button-link">
+          <i class="fab fa-github"></i>
+          <p>Github</p>
+        </div>
+      </a>
+    </div>
     <div id="coreo" class="project-summary">
+      <p class="message">
+        Coreo has a lot going on.
+        <a href="https://www.youtube.com/watch?v=FbEfbmgOsj8" target="_blank"
+          >This</a
+        >
+        link is to a 6 minute video of us breaking down how all the technologies
+        fit together.
+      </p>
+      <br />
       <p>
         Coreo is a tool for choreographers to share videos with their dances and
         vise-versa. Choreographers record videos with their webcam that they can
-        then share with their dance team. The dancers in the dance team can then
-        watch and practice the routine. When a dancer has got the routine down
-        they can then record their own dance, which is then compared to the
-        original video using computer vision.
+        then share with their dance team. The dancers in the team can then watch
+        and practice the routine. When a dancer has perfected the routine, they
+        can then record their routine, which is then compared to the original
+        video using computer vision.
       </p>
-
       <h2>
-        Coreo is a single page web application with built with React on the
-        front-end and Node on the back-end
+        The idea behind Coreo was building an application like Slack but for
+        dancers and choreographers.
+      </h2>
+      <img
+        src="https://tobar-portfolio.s3-us-west-1.amazonaws.com/coreo-ui.png"
+      />
+      <p>
+        As far as the UI is concerned, Coreo looks a lot like Slack. Every user
+        is a part of a dance team. Choreographers post videos on the dance
+        team's main page. It is then the job of the dancer to watch the videos
+        and post responses.
+      </p>
+      <p>
+        Choreographers can also assign dances for users to practice. Dancers
+        must then record their own version of the dance and submit it. The
+        dancer's video is then compared to the choreographer's video, which
+        produces a grade.
+      </p>
+      <h2>
+        The difficult bit was the video recording, and pose comparisons. We used
+        a TensorFlow package called Posenet.
       </h2>
       <p>
-        The intial idea behind Coreo was building an application that could
-        grade one dancer's based on another dancer's performace. We achieved
-        this doing a combination of Tensorflow and web workers.
+        For pose detection we used a
+        <a href="https://www.tensorflow.org/">TensorFlow</a> package called
+        <a
+          href="https://www.tensorflow.org/lite/models/pose_estimation/overview"
+          >Posenet</a
+        >. Posenet takes an image, and runs it through a neural network to find
+        a human shape in the image. The neural network then identifies the
+        joints of the human figure and returns them as key, value pairs.
       </p>
       <img
         src="https://raw.githubusercontent.com/brain-dance/brain-dancer/master/coreo-example.png"
       />
       <p>
-        While a dancer is recording their video, frames are sent one at a time
-        to a web worker. The web worker runs the frame through Posenet, which
-        returns the body positions of the dancer. When the video is done
+        We wanted the app to give dancers quick feedback on their results. To do
+        this we decided to run our pose detection software on the user's
+        machine. While a dancer is recording their video, frames are sent one at
+        a time to a web worker. The web worker runs the frame through Posenet,
+        which returns the body positions of the dancer. When the video is done
         recording, we have a list of frames with individual poses. The web
         worker then sends these frames back to the main thread, which compares
         the frames to the choreographers video. The scores of each frame are
@@ -57,31 +105,31 @@
         The back-end uses a Node server, a PostGreSQL DB for user information
         and a Cloudinary DB for video storage.
       </h2>
-      <img
-        src="https://tobar-portfolio.s3-us-west-1.amazonaws.com/coreo-ui.png"
-      />
       <p>
-        When a choreographer uploads a video, Node uses FFMPEG (a command line
-        library for image and video processing) to split the new video into
-        individual frames. Each frame is then passed to Posenet which detects
-        the poses of the dancer. The poses are then converted to strings and
-        saved in an PostGreSQL along with other video information. The video is
-        saved to Cloudinary.
+        We process a choreographer's video a little differently. Since we don't
+        have any video to comapare it to yet we use Posenet on the server. Node
+        uses FFMPEG (a command line library for image and video processing) to
+        split the new video into individual frames. Each frame is then passed to
+        Posenet which detects the poses of the dancer. The poses are then
+        converted to strings and saved in an PostGreSQL along with other video
+        information. The video is saved to Cloudinary.
       </p>
-      <div class="project-links">
-        <a href="https://coreo-ai.herokuapp.com" target="_blank">
-          <div class="button-link">
-            <i class="fas fa-globe-americas"></i>
-            <p>Site</p>
-          </div>
-        </a>
-        <a href="https://github.com/brain-dance/brain-dancer" target="_blank">
-          <div class="button-link">
-            <i class="fab fa-github"></i>
-            <p>Github</p>
-          </div>
-        </a>
-      </div>
+      <p>
+        When a dancer records their version of the choreographer's dance, they
+        receive the video from Cloudinary and the pose frames from PostGreSQL.
+        This is how we can compare all the poses for a new dance on the client's
+        computer.
+      </p>
+      <p>
+        This application used many different technologies. We only had two weeks
+        to complete it, but I was impressed with how it turned out. Truthfully,
+        in today's age of video calls, COVID-19 and working from home, this app
+        makes a lot more sense. We made this in December 2019, however if COVID
+        has the impact that I think it will, we're going to see an increase in
+        the quality of webcams and mics for personal computers. If that is the
+        case, then I suspect there will be quite a few more apps like this.
+        Anyways, tangent over, thanks for reading!
+      </p>
     </div>
     <div class="footer">
       <p class="grid-header">CONTACT</p>
