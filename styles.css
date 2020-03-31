@@ -52,14 +52,13 @@ a:visited {
 }
 
 #landing img {
-  width: 100%;
   margin: 0 auto;
   position: absolute;
-  top: -9999px;
-  bottom: -9999px;
-  left: -9999px;
-  right: -9999px;
   margin: auto;
+  /* opacity: 0.6 !important; */
+  bottom: 999999px;
+  top: 999999px;
+  zoom: 0.8;
 }
 
 #landing img.mobile {
@@ -151,6 +150,11 @@ a:visited {
 #bio {
   font-family: poppins;
   height: min-content;
+}
+
+#bio {
+  font-size: 20pt !important;
+  line-height: 3rem !important;
 }
 
 #contact p {
