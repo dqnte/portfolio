@@ -12,13 +12,22 @@
   />
   <link href="styles.css" rel="stylesheet" />
   <body>
-    <div class="header">
-      <a href="index.html" class="back">
-        <i class="material-icons">
-          arrow_back
-        </i>
+    <div class="header nav">
+      <a href="index.html">
+        <h4 class="link">Home</h4>
       </a>
-      <h2 class="title">PHOTOGRAPHY</h2>
+      <a href="projects.html">
+        <h4 class="link">Projects</h4>
+      </a>
+      <a href="photography.html">
+        <h4 class="link">Photography</h4>
+      </a>
+      <a href="experience.html">
+        <h4 class="link">Experience</h4>
+      </a>
+      <a href="contact.html">
+        <h4 class="link">Contact</h4>
+      </a>
     </div>
     <div id="images"></div>
     <div class="footer unloaded">
@@ -46,6 +55,7 @@
       </a>
     </div>
   </body>
+  <script src="navbar.js"></script>
   <script>
     const images = document.querySelector('#images');
     const footer = document.querySelector('.footer');

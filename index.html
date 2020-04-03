@@ -43,7 +43,7 @@
         </div>
         <div id="photo" class="reveal-container">
           <p class="reveal-item">
-            I'm also a photographer, I take pitures of my friends and of bands
+            I'm also a photographer, I take pictures of my friends and of bands
             in the Los Angeles area.
           </p>
         </div>
@@ -98,6 +98,11 @@
       sky.classList = 'load-fade';
     });
 
+    if (isMobile) {
+      document.querySelector('#landing').classList = 'mobile';
+      document.querySelector('.header').classList.add('mobile');
+    }
+
     // wrap up
     setTimeout(() => {
       sky.classList = 'load-fade';
@@ -110,8 +115,7 @@
         }
 
         if (isMobile) {
-          name.classList.add('mobile');
-          bio.classList.add('mobile');
+          text.classList.add('mobile');
         }
       }, 200);
     }, 1000);

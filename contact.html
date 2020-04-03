@@ -14,13 +14,22 @@
     <link href="styles.css" rel="stylesheet" />
   </head>
   <body>
-    <div class="header">
-      <a href="index.html" class="back">
-        <i class="material-icons">
-          arrow_back
-        </i>
+    <div class="header nav">
+      <a href="index.html">
+        <h4 class="link">Home</h4>
       </a>
-      <h2 class="title">CONTACT</h2>
+      <a href="projects.html">
+        <h4 class="link">Projects</h4>
+      </a>
+      <a href="photography.html">
+        <h4 class="link">Photography</h4>
+      </a>
+      <a href="experience.html">
+        <h4 class="link">Experience</h4>
+      </a>
+      <a href="contact.html">
+        <h4 class="link">Contact</h4>
+      </a>
     </div>
     <div id="contact" class="unloaded">
       <img src="https://tobar-portfolio.s3-us-west-1.amazonaws.com/guber.jpg" />
@@ -41,7 +50,7 @@
         </a>
         <a href="https://www.instagram.com/eggward_norton/">
           <i style="font-size:2em" class="fa">&#xf16d;</i>
-          <h4 class="hlink">@eggward.norton</h4>
+          <h4 class="hlink">@eggward_norton</h4>
         </a>
 
         <a>
@@ -53,6 +62,7 @@
       </div>
     </div>
   </body>
+  <script src="navbar.js"></script>
   <script>
     const bufferSetUp = async () => {
       const face = await document.querySelector('img');
