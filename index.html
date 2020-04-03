@@ -12,10 +12,41 @@
   />
   <link rel="icon" type="image/png" href="/favicon.ico" />
   <link href="styles.css" rel="stylesheet" />
-  <body style="background-color:#000">
+  <body>
+    <div class="header nav">
+      <a href="index.html">
+        <h4 class="link">Home</h4>
+      </a>
+      <a href="projects.html">
+        <h4 class="link">Projects</h4>
+      </a>
+      <a href="photography.html">
+        <h4 class="link">Photography</h4>
+      </a>
+      <a href="experience.html">
+        <h4 class="link">Experience</h4>
+      </a>
+      <a href="contact.html">
+        <h4 class="link">Contact</h4>
+      </a>
+    </div>
     <div id="landing">
-      <div class="reveal-container">
-        <h1 id="name" class="unloaded">Dante Tobar</h1>
+      <div class="text-grid">
+        <div id="name" class="reveal-container">
+          <h1 class="reveal-item">Dante Tobar</h1>
+        </div>
+        <div id="eng" class="reveal-container">
+          <p class="reveal-item">
+            Hi! I'm a software engineer with experience ranging from full-stack
+            web development to computational physics.
+          </p>
+        </div>
+        <div id="photo" class="reveal-container">
+          <p class="reveal-item">
+            I'm also a photographer, I take pitures of my friends and of bands
+            in the Los Angeles area.
+          </p>
+        </div>
       </div>
       <img
         src="https://tobar-portfolio.s3-us-west-1.amazonaws.com/sky-comp.jpg"
@@ -23,45 +54,7 @@
         id="sky"
       />
     </div>
-    <div id="links">
-      <a href="projects.html" id="proj-link" class="loaded">PROJECTS</a>
-      <a href="photography.html" id="photo-link" class="loaded">PHOTOGRAPHY</a>
-      <a href="experience.html" id="exp-link" class="loaded">EXPERIENCE</a>
-      <a href="contact.html" id="contact-link" class="loaded">CONTACT</a>
-      <img
-        src="https://tobar-portfolio.s3-us-west-1.amazonaws.com/bike-comp.jpg"
-        id="bike-img"
-        class="background unloaded"
-      />
-      <img
-        src="https://tobar-portfolio.s3-us-west-1.amazonaws.com/computer-comp.jpg"
-        id="computer-img"
-        class="background unloaded"
-      />
-      <img
-        src="https://tobar-portfolio.s3-us-west-1.amazonaws.com/project-comp.jpg"
-        id="project-img"
-        class="background unloaded"
-      />
-      <img
-        src="https://tobar-portfolio.s3-us-west-1.amazonaws.com/camera-comp.jpg"
-        id="camera-img"
-        class="background unloaded"
-      />
-    </div>
-    <div id="contact" class="index">
-      <p id="bio">
-        <span style="font-size: 40pt;">
-          Hi!
-        </span>
-        <br />
-        My name is Dante.
-        <br />
-        I like making stuff with computers.
-      </p>
-      <img src="https://tobar-portfolio.s3-us-west-1.amazonaws.com/sibs0.jpg" />
-    </div>
-    <div class="footer loaded">
+    <div class="footer loaded home">
       <p class="grid-header">CONTACT</p>
 
       <a href="http://linkedin.com/in/dante-m-tobar">
@@ -86,8 +79,10 @@
       </a>
     </div>
   </body>
+  <script src="navbar.js"></script>
   <script>
     const sky = document.querySelector('#sky');
+    const text = document.querySelector('.text-grid');
     let isMobile = false;
     if (
       /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
@@ -99,44 +94,9 @@
         'https://tobar-portfolio.s3-us-west-1.amazonaws.com/sky-mobile.jpg';
     }
 
-    const backgrounds = document.querySelectorAll('.background');
-
-    const proj = document.querySelector('#proj-link');
-    proj.addEventListener('mouseover', () => {
-      backgrounds.forEach(img => (img.classList = 'background unloaded'));
-      document.querySelector('#computer-img').classList =
-        'background load-fade';
+    sky.addEventListener('load', () => {
+      sky.classList = 'load-fade';
     });
-
-    const photo = document.querySelector('#photo-link');
-    photo.addEventListener('mouseover', () => {
-      backgrounds.forEach(img => (img.classList = 'background unloaded'));
-      document.querySelector('#camera-img').classList = 'background load-fade';
-    });
-
-    const exp = document.querySelector('#exp-link');
-    exp.addEventListener('mouseover', () => {
-      backgrounds.forEach(img => (img.classList = 'background unloaded'));
-      document.querySelector('#project-img').classList = 'background load-fade';
-    });
-
-    const contact = document.querySelector('#contact-link');
-    contact.addEventListener('mouseover', () => {
-      backgrounds.forEach(img => (img.classList = 'background unloaded'));
-      document.querySelector('#bike-img').classList = 'background load-fade';
-    });
-
-    const firstImg = document.querySelector('#bike-img');
-
-    firstImg.addEventListener('load', () => {
-      proj.classList = 'loaded';
-      photo.classList = 'loaded';
-      exp.classList = 'loaded';
-      contact.classList = 'loaded';
-      firstImg.classList = 'background loaded';
-    });
-
-    const name = document.querySelector('#name');
 
     // wrap up
     setTimeout(() => {
@@ -145,12 +105,15 @@
         sky.classList.add('mobile');
       }
       setTimeout(() => {
-        name.classList = 'load-reveal';
+        for (let i = 0; i < text.children.length; i++) {
+          text.children[i].children[0].classList = 'load-reveal';
+        }
+
         if (isMobile) {
           name.classList.add('mobile');
+          bio.classList.add('mobile');
         }
-      }, 1000);
-      firstImg.classList = 'background loaded';
-    }, 200);
+      }, 200);
+    }, 1000);
   </script>
 </html>
