@@ -57,6 +57,18 @@
   </body>
   <script src="navbar.js"></script>
   <script>
+    let isMobile = false;
+    if (
+      /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+        navigator.userAgent
+      )
+    ) {
+      isMobile = true;
+    }
+
+    if (isMobile) {
+      document.querySelector('.header').classList.add('mobile');
+    }
     const images = document.querySelector('#images');
     const footer = document.querySelector('.footer');
     const baseURL = 'https://tobar-portfolio.s3-us-west-1.amazonaws.com/';

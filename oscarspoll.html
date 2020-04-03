@@ -90,4 +90,18 @@
     </div>
   </body>
   <script src="./navbar.js"></script>
+  <script>
+    let isMobile = false;
+    if (
+      /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+        navigator.userAgent
+      )
+    ) {
+      isMobile = true;
+    }
+
+    if (isMobile) {
+      document.querySelector('.header').classList.add('mobile');
+    }
+  </script>
 </html>

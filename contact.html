@@ -64,6 +64,18 @@
   </body>
   <script src="navbar.js"></script>
   <script>
+    let isMobile = false;
+    if (
+      /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+        navigator.userAgent
+      )
+    ) {
+      isMobile = true;
+    }
+
+    if (isMobile) {
+      document.querySelector('.header').classList.add('mobile');
+    }
     const bufferSetUp = async () => {
       const face = await document.querySelector('img');
       const contact = await document.querySelector('#contact');
