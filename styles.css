@@ -21,7 +21,6 @@ a:visited {
   margin-top: 10vh;
   height: 100vh;
   background-color: #fff;
-  overflow: hidden;
   position: relative;
 }
 
@@ -68,16 +67,6 @@ a:visited {
   margin: 1rem;
 }
 
-@keyframes reveal {
-  from {
-    transform: translateY(100%);
-  }
-
-  to {
-    transform: translateY(0);
-  }
-}
-
 .reveal-item {
   margin: 0;
   transform: translateY(100%);
@@ -98,11 +87,16 @@ a:visited {
 }
 
 #landing img {
-  opacity: 0.9;
+  opacity: 0.7;
   margin: 0 auto;
   position: absolute;
   bottom: 0;
   width: 100%;
+  transition: opacity 1s;
+}
+
+img.load-home {
+  opacity: 0.9;
 }
 
 #name.mobile {
@@ -290,32 +284,40 @@ a:visited {
 
 #images {
   display: grid;
-  margin: 30px auto;
-  margin-top: 15vh;
-  grid-template-columns: 1fr 1fr 1fr;
-  width: min-content;
+  margin: 0 auto;
+  margin-top: 10vh;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  width: 80%;
+  padding: 50px;
+}
+
+.full-image {
+  grid-column: span 7;
+}
+
+.square-image {
+  grid-column: span 2;
+}
+
+.square-skip {
+  grid-column: 1 / span 2;
+}
+
+.horizontal-image {
+  grid-row: span 2;
+  grid-column: 3 / span 3;
 }
 
 #images img {
-  width: 300px;
+  width: 100%;
   margin: 2px;
 }
 
-@media (max-width: 1000px) {
+/* @media (max-width: 1000px) {
   #images img {
     width: 30vw !important;
   }
-}
-
-@media (max-device-width: 1000px) {
-  #images img {
-    width: 30vw !important;
-  }
-}
-
-#images img {
-  opacity: 0;
-}
+} */
 
 /* PROJECTS */
 

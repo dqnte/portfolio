@@ -29,8 +29,58 @@
         <h4 class="link">Contact</h4>
       </a>
     </div>
-    <div id="images"></div>
-    <div class="footer unloaded">
+    <div id="images">
+      <img
+        src="https://tobar-portfolio.s3-us-west-1.amazonaws.com/jarrenfarefax.jpg"
+        class="full-image"
+      />
+      <img
+        src="https://tobar-portfolio.s3-us-west-1.amazonaws.com/educatedboys.jpg"
+        class="square-image"
+      />
+      <img
+        src="https://tobar-portfolio.s3-us-west-1.amazonaws.com/sandm.jpg"
+        class="square-image"
+      />
+      <img
+        src="https://tobar-portfolio.s3-us-west-1.amazonaws.com/britforegg.jpg"
+        class="square-image square-skip"
+      />
+      <img
+        src="https://tobar-portfolio.s3-us-west-1.amazonaws.com/hightide.jpg"
+        class="square-image"
+      />
+      <img
+        src="https://tobar-portfolio.s3-us-west-1.amazonaws.com/seanforegg.jpg"
+        class="square-image square-skip"
+      />
+      <img
+        src="https://tobar-portfolio.s3-us-west-1.amazonaws.com/haze2.jpg"
+        class="horizontal-image"
+      />
+      <img
+        src="https://tobar-portfolio.s3-us-west-1.amazonaws.com/hoho.jpg"
+        class="full-image"
+      />
+
+      <img
+        src="https://tobar-portfolio.s3-us-west-1.amazonaws.com/seanpromo.jpg"
+        class="full-image"
+      />
+      <img
+        src="https://tobar-portfolio.s3-us-west-1.amazonaws.com/antonforegg.jpg"
+        class="square-image square-skip"
+      />
+      <img
+        src="https://tobar-portfolio.s3-us-west-1.amazonaws.com/mario.jpg"
+        class="horizontal-image"
+      />
+      <img
+        src="https://tobar-portfolio.s3-us-west-1.amazonaws.com/britflag.jpg"
+        class="horizontal-image"
+      />
+    </div>
+    <div class="footer">
       <p class="grid-header">CONTACT</p>
 
       <a href="http://linkedin.com/in/dante-m-tobar">
@@ -72,58 +122,32 @@
     const images = document.querySelector('#images');
     const footer = document.querySelector('.footer');
     const baseURL = 'https://tobar-portfolio.s3-us-west-1.amazonaws.com/';
-    const imageURLs = [
-      'sandm.jpg',
-      'educatedboys.jpg',
-      'vanillasky.jpg',
-      'antonforegg.jpg',
-      'britforegg.jpg',
-      'seanforegg.jpg',
-      'hoho3.jpg',
-      'hoho1.jpg',
-      'hoho2.jpg',
-      'tonpromo.jpg',
-      'sean1.jpg',
-      'rcpromo.jpg',
-      'mark.jpg',
-      'mario.jpg',
-      'dorthy.jpg',
-      'cow.jpg',
-      'sauciego.jpg',
-      'hightide.jpg',
-      'ohoh1.jpg',
-      'ohoh2.jpg',
-      'ohoh3.jpg',
-      'jer1.jpg',
-      'jarr2.jpg',
-      'jerr3.jpg',
-    ];
-    images.innerHTML = imageURLs
-      .map(url => {
-        return `<img src='${baseURL + url}'>`;
-      })
-      .join('');
+    // images.innerHTML = imageURLs
+    //   .map(url => {
+    //     return `<img src='${baseURL + url}'>`;
+    //   })
+    //   .join('');
 
-    const bufferSetUp = async () => {
-      const imageTags = await document.querySelectorAll('img');
+    // const bufferSetUp = async () => {
+    //   const imageTags = await document.querySelectorAll('img');
 
-      let loadedCount = 0;
-      const loaded = () => {
-        loadedCount += 1;
+    //   let loadedCount = 0;
+    //   const loaded = () => {
+    //     loadedCount += 1;
 
-        if (loadedCount === imageURLs.length) {
-          imageTags.forEach(tag => {
-            tag.classList.add('loaded');
-          });
-          footer.classList = 'footer loaded';
-        }
-      };
+    //     if (loadedCount === imageURLs.length) {
+    //       imageTags.forEach(tag => {
+    //         tag.classList.add('loaded');
+    //       });
+    //       footer.classList = 'footer loaded';
+    //     }
+    //   };
 
-      imageTags.forEach(tag => {
-        tag.addEventListener('load', loaded);
-      });
-    };
+    //   imageTags.forEach(tag => {
+    //     tag.addEventListener('load', loaded);
+    //   });
+    // };
 
-    bufferSetUp();
+    // bufferSetUp();
   </script>
 </html>
