@@ -45,7 +45,7 @@ a:visited {
   padding: 2rem;
   display: grid;
   grid-template-columns: 1fr 2fr;
-  grid-template-rows: fit-content(100%);
+  xgrid-template-rows: fit-content(100%);
 }
 
 .reveal-container {
@@ -53,6 +53,7 @@ a:visited {
   margin: 0;
   z-index: 9;
   height: fit-content;
+  height: -moz-fit-content;
 }
 
 #name {
